@@ -1,0 +1,92 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.login-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  margin: 0;
+}
+
+.lg-sticker {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Login card ───────────────────────────────────────────────── */
+.login-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.login-input {
+  padding: 9px 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.30);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0F172A;
+  width: 230px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-input::placeholder { color: #94A3B8; }
+
+.login-input:focus {
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.login-button {
+  padding: 9px 20px;
+  background: #4F46E5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.4);
+}
+
+.login-button:hover {
+  background: #4338CA;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.5);
+  transform: translateY(-1px);
+}
+
+.login-button:active { transform: translateY(0); }
+
+.login-error {
+  font-size: 13px;
+  color: #fff;
+  background: rgba(239, 68, 68, 0.82);
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(248, 113, 113, 0.5);
+  backdrop-filter: blur(8px);
+  max-width: 380px;
+  text-align: center;
+}

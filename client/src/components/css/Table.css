@@ -1,0 +1,76 @@
+.analytics-table-wrap {
+  overflow-x: auto;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+/* ── Header ───────────────────────────────────────────────────── */
+.analytics-table thead {
+  background: var(--bg-secondary);
+}
+
+.analytics-th {
+  padding: 11px 12px;
+  border-bottom: 2px solid var(--border-medium);
+  border-right: 1px solid var(--border);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.analytics-th:last-child { border-right: none; }
+
+.analytics-th.col-active {
+  background: var(--accent-subtle);
+  color: var(--accent-vivid);
+}
+
+/* ── Body ─────────────────────────────────────────────────────── */
+.analytics-table tbody tr {
+  transition: background 0.1s;
+}
+
+.analytics-td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.analytics-td:last-child { border-right: none; }
+
+.analytics-td.col-active {
+  background: var(--accent-subtle);
+}
+
+/* Current-user highlight row */
+.analytics-table tr.row-highlight {
+  background: var(--color-warning-bg);
+}
+
+/* ── Footer / totals ──────────────────────────────────────────── */
+.analytics-table tfoot tr {
+  background: var(--bg-elevated);
+}
+
+.analytics-table tfoot .analytics-td {
+  border-top: 2px solid var(--border-medium);
+  border-bottom: none;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 13px;
+}

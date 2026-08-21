@@ -1,0 +1,206 @@
+/* ═══════════════════════════════════════════════════════════════
+   SPRINT ANALYTICS — Design System
+   Professional Slate/Indigo palette
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv11", "ss01", "rlig" 1, "calt" 1;
+  font-optical-sizing: auto;
+
+  /* ── Backgrounds ── */
+  --bg-page:      #F8FAFC;
+  --bg-primary:   #FFFFFF;
+  --bg-secondary: #F1F5F9;
+  --bg-elevated:  #E8EDF2;
+
+  /* ── Text ── */
+  --text-primary:   #0F172A;
+  --text-secondary: #475569;
+  --text-muted:     #94A3B8;
+  --text-brand:     #1E293B;
+
+  /* ── Borders ── */
+  --border:        #E2E8F0;
+  --border-light:  #EEF2FF;
+  --border-medium: #CBD5E1;
+
+  /* ── Accent — Indigo ── */
+  --accent:        #6366F1;
+  --accent-vivid:  #4F46E5;
+  --accent-dark:   #3730A3;
+  --accent-hover:  #4338CA;
+  --accent-subtle: #EEF2FF;
+
+  /* ── Nav ── */
+  --nav-hover:  #F1F5F9;
+  --nav-active: #4F46E5;
+
+  /* ── Status ── */
+  --color-success:    #10B981;
+  --color-success-bg: #D1FAE5;
+  --color-error:      #EF4444;
+  --color-error-bg:   #FEE2E2;
+  --color-warning:    #F59E0B;
+  --color-warning-bg: #FEF3C7;
+
+  /* ── Shadows ── */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.10), 0 2px 4px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.14), 0 4px 8px rgba(15, 23, 42, 0.06);
+
+  /* ── Component ── */
+  --header-bg:     #FFFFFF;
+  --header-h:      52px;
+  --card-bg:       #FFFFFF;
+  --input-bg:      #FFFFFF;
+  --overlay-bg:    rgba(255, 255, 255, 0.97);
+  --modal-overlay: rgba(15, 23, 42, 0.55);
+  --radius-sm:     6px;
+  --radius-md:     8px;
+  --radius-lg:     12px;
+
+  --spinner-a: #6366F1;
+  --spinner-b: #818CF8;
+
+  color: var(--text-primary);
+  background-color: var(--bg-page);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK THEME
+   ═══════════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  /* ── 4-level surface hierarchy (each clearly distinct) ── */
+  --bg-page:      #0F172A;   /* Slate-900 — page/deepest bg */
+  --bg-primary:   #1E293B;   /* Slate-800 — default surface  */
+  --bg-secondary: #293548;   /* between 800–700 — subtle lift */
+  --bg-elevated:  #374B63;   /* noticeably lighter — headers, hover */
+
+  --text-primary:   #F1F5F9; /* Slate-100 */
+  --text-secondary: #94A3B8; /* Slate-400 */
+  --text-muted:     #64748B; /* Slate-500 */
+  --text-brand:     #CBD5E1; /* Slate-300 */
+
+  /* ── Borders — clearly visible in dark context ── */
+  --border:        #334155;  /* Slate-700 — strong, visible row separators */
+  --border-light:  #253348;  /* subtle dividers */
+  --border-medium: #475569;  /* Slate-600 — prominent borders */
+
+  --accent:        #818CF8;  /* Indigo-400 */
+  --accent-vivid:  #6366F1;  /* Indigo-500 */
+  --accent-dark:   #A5B4FC;  /* Indigo-300 */
+  --accent-hover:  #6366F1;
+  --accent-subtle: #1E1B4B;
+
+  --nav-hover:  #293548;
+  --nav-active: #4F46E5;
+
+  --color-success:    #34D399;
+  --color-success-bg: #064E3B;
+  --color-error:      #F87171;
+  --color-error-bg:   #450A0A;
+  --color-warning:    #FCD34D;
+  --color-warning-bg: #451A03;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.55), 0 1px 2px rgba(0, 0, 0, 0.40);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.65), 0 2px 4px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.75), 0 4px 8px rgba(0, 0, 0, 0.55);
+
+  --header-bg:     #1E293B;
+  --card-bg:       #1E293B;  /* Slate-800 — clearly lighter than page */
+  --input-bg:      #0F172A;  /* page-level dark for inputs */
+  --overlay-bg:    rgba(15, 23, 42, 0.97);
+  --modal-overlay: rgba(0, 0, 0, 0.75);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  display: flex;
+  place-items: center;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-vivid);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+a:hover { color: var(--accent-hover); }
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.375rem; }
+h3 { font-size: 1.0625rem; font-weight: 600; }
+h4 { font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.01em; }
+h5 { font-size: 0.875rem; font-weight: 600; letter-spacing: 0; }
+
+p { line-height: 1.65; color: var(--text-secondary); }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-md);
+  transition: background 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+  line-height: 1;
+}
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--input-bg);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s, background-color 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* Smooth theme transitions */
+.app-header, .dashboard, .sprint-review, .patches-view, .tvpms-view,
+.work-item-page, .worklog-page, .board-selection-container,
+.gerrit-card, .table-wrap, .metrics-table, .patches-container,
+.tvpms-container, .analytics-card, .chart-card, .worklog-item,
+.kpi-card, .kpi-header, .kpi-tabs, .evaluation-review, .team-management {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}

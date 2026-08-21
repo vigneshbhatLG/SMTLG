@@ -1,0 +1,176 @@
+.sprint-review {
+  padding: 24px;
+  background: var(--bg-page);
+  min-height: calc(100vh - var(--header-h, 52px));
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+  padding: 0 4px;
+}
+
+.review-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.4px;
+}
+
+.people-metrics,
+.issue-transfers {
+  margin-top: 24px;
+}
+
+.issue-transfers .review-header { margin-bottom: 16px; }
+.issue-transfers .review-header h2 { font-size: 18px; }
+
+/* ── Table wrapper ────────────────────────────────────────────── */
+.table-wrap {
+  overflow-x: auto;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.metrics-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+}
+
+.metrics-table thead { background: var(--bg-secondary); }
+
+.metrics-table th {
+  padding: 12px 18px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--border-medium);
+}
+
+.metrics-table td {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.metrics-table tbody tr { transition: background 0.12s; }
+.metrics-table tbody tr:hover { background: var(--bg-secondary); }
+.metrics-table tbody tr:last-child td { border-bottom: none; }
+
+.metrics-table tbody tr.total-row {
+  background: var(--bg-secondary);
+  border-top: 2px solid var(--border-medium);
+}
+
+.metrics-table tbody tr.total-row:hover { background: var(--bg-elevated); }
+.metrics-table tbody tr.total-row td {
+  padding: 14px 18px;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* ── States ───────────────────────────────────────────────────── */
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+  gap: 12px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.error-state {
+  padding: 14px 18px;
+  background: var(--color-error-bg);
+  border-left: 4px solid var(--color-error);
+  border-radius: var(--radius-md);
+  color: var(--color-error);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.empty-state {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ── Status badges ────────────────────────────────────────────── */
+.status-excellent {
+  color: #065f46;
+  background: rgba(16, 185, 129, 0.12);
+  border-left: 3px solid var(--color-success);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.status-overworked {
+  color: #7f1d1d;
+  background: rgba(239, 68, 68, 0.10);
+  border-left: 3px solid var(--color-error);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.status-underworked {
+  color: #92400e;
+  background: rgba(245, 158, 11, 0.10);
+  border-left: 3px solid var(--color-warning);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.status-neutral {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/* ── Metric values ────────────────────────────────────────────── */
+.metric-value {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+.metric-value.high   { color: var(--color-error); }
+.metric-value.medium { color: var(--color-warning); }
+.metric-value.low    { color: var(--color-success); }
+
+.metric-label { color: var(--text-secondary); font-size: 13px; font-weight: 500; }
+
+/* ── Dark mode status badge adjustments ─────────────────────── */
+[data-theme="dark"] .status-excellent  { color: #6ee7b7; background: rgba(16,185,129,0.15); }
+[data-theme="dark"] .status-overworked { color: #fca5a5; background: rgba(239,68,68,0.15); }
+[data-theme="dark"] .status-underworked{ color: #fcd34d; background: rgba(245,158,11,0.15); }
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sprint-review { padding: 16px; }
+  .review-header { flex-direction: column; align-items: stretch; margin-bottom: 20px; }
+  .review-header h2 { font-size: 18px; }
+  .metrics-table th { font-size: 11px; padding: 10px; }
+  .metrics-table td { font-size: 13px; padding: 9px 10px; }
+}

@@ -1,0 +1,16 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.app-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  color: var(--text-secondary);
+  font-size: 14px;
+  background: var(--bg-page);
+}

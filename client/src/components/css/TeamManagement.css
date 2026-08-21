@@ -1,0 +1,168 @@
+.team-management {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.team-management h3 {
+  margin-top: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-medium);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+/* ── Add member button ────────────────────────────────────────── */
+.add-member-btn {
+  background: var(--color-success);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  margin-bottom: 12px;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.add-member-btn:hover {
+  background: #15803D;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+}
+
+/* ── Add member form ──────────────────────────────────────────── */
+.add-member-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.add-member-form input {
+  padding: 8px 12px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-family: inherit;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.add-member-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.add-member-form button {
+  background: var(--accent-vivid);
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.add-member-form button:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+}
+
+/* ── Members grid ─────────────────────────────────────────────── */
+.members-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.member-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.member-card:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--accent);
+}
+
+.member-info { flex: 1; }
+
+.member-info strong {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.member-info p {
+  margin: 0 0 6px;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.role-badge {
+  display: inline-block;
+  background: var(--accent-subtle);
+  color: var(--accent-vivid);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ── Remove button ────────────────────────────────────────────── */
+.remove-btn {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 5px 11px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  margin-left: 10px;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.remove-btn:hover {
+  background: var(--color-error);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.25);
+}
+
+.no-members {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .add-member-form { grid-template-columns: 1fr; }
+  .members-list    { grid-template-columns: 1fr; }
+}

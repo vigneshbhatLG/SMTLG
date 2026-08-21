@@ -1,0 +1,180 @@
+.gerrit-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--modal-overlay);
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.gerrit-card {
+  width: 420px;
+  border-radius: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  position: relative;
+  font-family: inherit;
+}
+
+.gerrit-header {
+  margin-top: 12px;
+  padding: 4px 18px 0;
+}
+
+.gerrit-header-text {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 12px;
+}
+
+.gerrit-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-brand);
+  font-weight: 700;
+  font-size: 18px;
+  border: 1px solid var(--border);
+}
+
+.gerrit-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-top: 4px;
+}
+
+.gerrit-subtitle {
+  margin: 6px 18px 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.gerrit-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.gerrit-close:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* ── Form ─────────────────────────────────────────────────────── */
+.gerrit-form {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gerrit-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.gerrit-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-medium);
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+}
+
+.gerrit-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-subtle);
+}
+
+.gerrit-toggle {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-medium);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.gerrit-toggle:hover {
+  background: var(--bg-elevated);
+  border-color: var(--accent);
+}
+
+.gerrit-error {
+  color: var(--color-error);
+  background: var(--color-error-bg);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--color-error);
+  font-size: 13px;
+}
+
+/* ── Footer buttons ───────────────────────────────────────────── */
+.gerrit-ghost {
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-medium);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.gerrit-ghost:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent);
+}
+
+.gerrit-primary {
+  padding: 9px 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent-vivid);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: inherit;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gerrit-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+}

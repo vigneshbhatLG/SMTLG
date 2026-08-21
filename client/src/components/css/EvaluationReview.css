@@ -1,0 +1,250 @@
+.evaluation-review {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.evaluation-review h3 {
+  margin-top: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-medium);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+/* ── Quarter tabs ─────────────────────────────────────────────── */
+.quarter-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+}
+
+.quarter-tab {
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: color 0.15s, border-color 0.15s;
+  margin-bottom: -1px;
+}
+
+.quarter-tab:hover  { color: var(--accent-vivid); }
+.quarter-tab.active { color: var(--accent-vivid); border-bottom-color: var(--accent-vivid); }
+
+/* ── Evaluation header ────────────────────────────────────────── */
+.evaluation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.evaluation-header h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ── Buttons ──────────────────────────────────────────────────── */
+.edit-btn {
+  background: var(--accent-vivid);
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 600;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.edit-btn:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+}
+
+.cancel-btn {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-medium);
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 600;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.cancel-btn:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-medium);
+}
+
+.save-btn {
+  background: var(--color-success);
+  color: #ffffff;
+  border: none;
+  padding: 9px 22px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  align-self: flex-start;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.save-btn:hover {
+  background: #15803D;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+}
+
+/* ── View sections ────────────────────────────────────────────── */
+.evaluation-view {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.evaluation-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.evaluation-rating label {
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.rating-badge {
+  padding: 5px 13px;
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.evaluation-section {
+  padding: 12px 14px;
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--accent-vivid);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-vivid);
+}
+
+.evaluation-section h5 {
+  margin: 0 0 6px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.evaluation-section p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.evaluation-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.evaluation-column {
+  padding: 12px 14px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.evaluation-column h5 {
+  margin: 0 0 6px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.evaluation-column p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* ── Edit form ────────────────────────────────────────────────── */
+.evaluation-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-group-eval {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group-eval label {
+  font-weight: 700;
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.form-group-eval input,
+.form-group-eval select,
+.form-group-eval textarea {
+  padding: 8px 12px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 14px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-group-eval textarea { resize: vertical; min-height: 90px; }
+
+.form-group-eval input:focus,
+.form-group-eval select:focus,
+.form-group-eval textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.form-row-eval {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .quarter-tabs { flex-wrap: wrap; }
+  .evaluation-row, .form-row-eval { grid-template-columns: 1fr; }
+}

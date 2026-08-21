@@ -1,0 +1,178 @@
+.worklog-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 20px 24px;
+  min-height: calc(100vh - var(--header-h, 52px));
+  background: var(--bg-page);
+}
+
+.worklog-header-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.worklog-member-name {
+  margin: 0;
+  padding: 0;
+  min-width: 160px;
+  flex-shrink: 0;
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.back-btn {
+  padding: 7px 16px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: inherit;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.back-btn:hover {
+  background: var(--accent-subtle);
+  border-color: var(--accent);
+  color: var(--accent-vivid);
+}
+
+.worklog-content {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Sidebar: ticket list ─────────────────────────────────────── */
+.worklog-sidebar {
+  width: 35%;
+  border-right: 1px solid var(--border);
+  padding-right: 16px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.loading {
+  padding: 16px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.ticket-btn {
+  padding: 10px 12px;
+  position: relative;
+  text-align: left;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.ticket-btn:hover {
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+.ticket-btn.active {
+  border: 1.5px solid var(--accent-vivid);
+  background: var(--accent-subtle);
+}
+
+.ticket-id-row {
+  font-weight: 700;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+.ticket-title {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* ── Label badges ─────────────────────────────────────────────── */
+.label-badge {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.label-badge.development { background: var(--color-success-bg); color: var(--color-success); }
+.label-badge.issue       { background: var(--color-error-bg);   color: var(--color-error);   }
+.label-badge.operation   { background: var(--accent-subtle);    color: var(--accent-vivid);  }
+.label-badge.training    { background: #F3E8FF; color: #7C3AED; }
+.label-badge.default     { background: var(--bg-elevated);      color: var(--text-muted);    }
+
+[data-theme="dark"] .label-badge.training { background: #1E1035; color: #C084FC; }
+
+/* ── Status badges ────────────────────────────────────────────── */
+.status-badge {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.status-badge.closed         { background: var(--color-success-bg); color: var(--color-success); }
+.status-badge.verify         { background: var(--accent-subtle);    color: var(--accent-vivid);  }
+.status-badge.analysis       { background: var(--color-warning-bg); color: var(--color-warning); }
+.status-badge.implementation { background: var(--color-warning-bg); color: var(--color-warning); }
+.status-badge.screen         { background: var(--bg-elevated); color: var(--text-secondary); }
+.status-badge.open           { background: var(--bg-elevated); color: var(--text-secondary); }
+
+.ticket-link-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ── Main content area ────────────────────────────────────────── */
+.worklog-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .worklog-page { padding: 12px; }
+  .worklog-content { flex-direction: column; }
+  .worklog-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding-right: 0;
+    padding-bottom: 16px;
+    height: auto;
+  }
+}
